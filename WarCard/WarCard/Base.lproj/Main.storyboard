@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WarCard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="Xh2-5J-v92">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoMakr_29eBSc" translatesAutoresizingMaskIntoConstraints="NO" id="5jx-Bb-9Xy">
+                                <rect key="frame" x="107" y="54" width="200" height="119.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="M40-s4-F8L"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="M40-s4-F8L"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="M40-s4-F8L"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="YtE-pP-Lsc" userLabel="CardButtonStackView">
+                                <rect key="frame" x="72" y="357.5" width="270" height="221"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="88s-D5-Bga" userLabel="Cards Stack View">
+                                        <rect key="frame" x="0.0" y="0.0" width="270" height="170"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="VPP-vF-RWg">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="170"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="Krd-af-E9k">
+                                                <rect key="frame" x="150" y="0.0" width="120" height="170"/>
+                                            </imageView>
+                                        </subviews>
+                                        <variation key="heightClass=compact-widthClass=compact" spacing="20"/>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Plt-oX-Yge" userLabel="deal button">
+                                        <rect key="frame" x="94" y="190" width="82" height="31"/>
+                                        <state key="normal" image="dealbutton"/>
+                                        <connections>
+                                            <action selector="dealButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tpo-uc-Vjj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <variation key="heightClass=compact-widthClass=compact" spacing="30"/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="dnQ-9X-ZZv" userLabel="Player Score Stack View">
+                                <rect key="frame" x="20" y="770.5" width="54" height="71.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4S-zl-2M1">
+                                        <rect key="frame" x="0.0" y="0.0" width="54" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="20"/>
+                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xmn-wY-LtT">
+                                        <rect key="frame" x="0.0" y="23.5" width="25" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="gD3-6N-Uvp" userLabel="CPU Score Stack View">
+                                <rect key="frame" x="358" y="770.5" width="36" height="71.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CPU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vzv-XR-XtP">
+                                        <rect key="frame" x="0.0" y="0.0" width="36" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="20"/>
+                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HHp-BB-ezz">
+                                        <rect key="frame" x="11" y="23.5" width="25" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Wins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4W-sA-BGQ" userLabel="PlayerWins">
+                                <rect key="frame" x="46" y="412.5" width="322.5" height="71"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="65"/>
+                                <color key="textColor" red="0.16744929694492286" green="0.061977027779403539" blue="0.18650825777202074" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CPU Wins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oba-Um-t2f">
+                                <rect key="frame" x="81" y="412.5" width="252" height="71"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="65"/>
+                                <color key="textColor" red="0.060401678029834323" green="0.022356119407350758" blue="0.067276554404145039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bw5-Ik-X46" userLabel="PlayAgain">
+                                <rect key="frame" x="359" y="64" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="AtF-WL-Lo5"/>
+                                    <constraint firstAttribute="height" constant="35" id="YWo-bQ-kST"/>
+                                </constraints>
+                                <state key="normal" image="icons8-reset@2"/>
+                                <connections>
+                                    <action selector="PlayAgain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bUc-L1-5lA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5jx-Bb-9Xy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="6aV-av-v2m"/>
+                            <constraint firstItem="Xh2-5J-v92" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="7Ev-Oi-sLs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gD3-6N-Uvp" secondAttribute="trailing" constant="20" id="7Nh-ha-KPI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dnQ-9X-ZZv" secondAttribute="bottom" constant="20" id="8O2-sK-kkU"/>
+                            <constraint firstItem="5jx-Bb-9Xy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9kG-wv-k4L"/>
+                            <constraint firstItem="Bw5-Ik-X46" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="CLa-k5-oCJ"/>
+                            <constraint firstItem="K4W-sA-BGQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D5t-BO-6Q2"/>
+                            <constraint firstItem="K4W-sA-BGQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="GmB-ta-xnV"/>
+                            <constraint firstItem="YtE-pP-Lsc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="20" id="GsV-j9-0Gj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gD3-6N-Uvp" secondAttribute="bottom" constant="20" id="HOk-UY-rHU"/>
+                            <constraint firstItem="YtE-pP-Lsc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PBS-xJ-YuW"/>
+                            <constraint firstItem="Xh2-5J-v92" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="QjQ-cz-1ZM"/>
+                            <constraint firstAttribute="trailing" secondItem="Xh2-5J-v92" secondAttribute="trailing" id="SZu-Le-pdK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bw5-Ik-X46" secondAttribute="trailing" constant="20" id="ds8-xs-SfH"/>
+                            <constraint firstAttribute="bottom" secondItem="Xh2-5J-v92" secondAttribute="bottom" id="epL-1M-xh0"/>
+                            <constraint firstItem="oba-Um-t2f" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jKV-WQ-IJx"/>
+                            <constraint firstItem="dnQ-9X-ZZv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="jKd-FL-Y0n"/>
+                            <constraint firstItem="oba-Um-t2f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="spC-EN-tXd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="CPUWins" destination="oba-Um-t2f" id="Tpx-Pz-J1k"/>
+                        <outlet property="PlayAgainHide" destination="Bw5-Ik-X46" id="aKa-jy-17c"/>
+                        <outlet property="PlayerWins" destination="K4W-sA-BGQ" id="tgV-J7-xh8"/>
+                        <outlet property="cpuScore" destination="HHp-BB-ezz" id="NvW-kQ-CBr"/>
+                        <outlet property="dealButtonHide" destination="Plt-oX-Yge" id="ERp-fm-hRW"/>
+                        <outlet property="leftimageView" destination="VPP-vF-RWg" id="aGq-4g-aWt"/>
+                        <outlet property="playerScore" destination="Xmn-wY-LtT" id="P1e-Ln-83o"/>
+                        <outlet property="rightimageView" destination="Krd-af-E9k" id="IQI-NT-3gB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.61607142857142" y="95.652173913043484"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background" width="414" height="896"/>
+        <image name="LogoMakr_29eBSc" width="200" height="119.5"/>
+        <image name="back" width="120" height="170"/>
+        <image name="dealbutton" width="82" height="31"/>
+        <image name="icons8-reset@2" width="50" height="50"/>
+    </resources>
+</document>
